@@ -17,11 +17,9 @@
         "text": "step3.md"
       }
     ],
-    "finish": [
-      {
-        "text": "finish.md"
-      }
-    ]
+    "finish": {
+      "text": "finish.md"
+    }
   },
   "backend": {
     "imageid": "ubuntu"
