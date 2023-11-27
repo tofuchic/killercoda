@@ -1,0 +1,23 @@
+{
+  "title": "gPRC quick start",
+  "description": "Run the example, and later update the schema(.proto) and applications",
+  "details": {
+    "intro": {
+      "text": "intro.md",
+      "background": "setup.sh"
+    },
+    "steps": [
+      {
+        "text": "step1.md"
+      }
+    ],
+    "finish": [
+      {
+        "text": "finish.md"
+      }
+    ]
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}
