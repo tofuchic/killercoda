@@ -29,3 +29,9 @@ But before all of this, you must fulfill the prerequisites.
     ```bash
     git clone -b v1.59.0 --depth 1 https://github.com/grpc/grpc-go
     ```{{exec}}
+
+1. Change to the quick start example directory.
+
+    ```bash
+    cd grpc-go/examples/helloworld
+    ```{{exec}}
