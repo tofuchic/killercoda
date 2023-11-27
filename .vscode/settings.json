@@ -1,0 +1,16 @@
+{
+  "editor.formatOnSave": true,
+  "prettier.arrowParens": "avoid",
+  "prettier.enable": false,
+  "prettier.embeddedLanguageFormatting": "off",
+  "[markdown]": {
+    "editor.tabSize": 4
+  },
+  "prettier.tabWidth": 4,
+  "markdownlint.config": {
+    "default": true,
+    "MD007": {
+      "indent": 4
+    }
+  }
+}
