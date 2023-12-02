@@ -14,7 +14,7 @@
     	"net"
     
     	"google.golang.org/grpc"
-    	"helloworld"
+    	"helloworld/helloworld"
     )
 
     const (
@@ -33,7 +33,7 @@
     // SayHello implements helloworld.GreeterServer
     func (s *server) SayHello(ctx context.Context, in *helloworld.HelloRequest) (*helloworld.HelloReply, error) {
     	log.Printf("Received: %v", in.GetName())
-    	return &helloworld.HelloReply{Message: "Hello " + in.GetName(),Name: *serverName}, nil
+    	return &helloworld.HelloReply{Message: "Hello " + in.GetName(),Name: serverName}, nil
     }
     
     func main() {
