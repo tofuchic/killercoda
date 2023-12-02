@@ -1,8 +1,9 @@
 # Step 6: Update the client application.
 
-1. Copy the source code below and override the `main.go`.
+1. Copy the source code below and override the `grpc-go/examples/helloworld/greeter_client/main.go`{{}}.
 
     ```
+    // Package main implements a client for Greeter service.
     package main
     
     import (
@@ -45,7 +46,7 @@
     	log.Printf("Greeting: %s", r.GetMessage())
     	log.Printf("Server name: %s", r.GetName())
     }
-    ```
+    ```{{copy}}
 
 1. Execute the client application and send a request to THE OLD SERVER.
 

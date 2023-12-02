@@ -4,3 +4,4 @@ wget https://dl.google.com/go/$latest_stable_go_version.linux-amd64.tar.gz
 sudo tar -xvf $latest_stable_go_version.linux-amd64.tar.gz
 rm -f $latest_stable_go_version.linux-amd64.tar.gz
 sudo mv go /usr/local
+echo done > /tmp/background0

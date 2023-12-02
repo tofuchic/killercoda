@@ -1,6 +1,6 @@
 # Step 7: Update the server application.
 
-1. Copy the source code below and override the `greeter_server/main.go`{{}}.
+1. Copy the source code below and override the `grpc-go/examples/helloworld/greeter_server/main.go`{{}}.
 
     ```
     // Package main implements a server for Greeter service.
@@ -14,7 +14,7 @@
     	"net"
     
     	"google.golang.org/grpc"
-    	"helloworld"
+    	"helloworld/helloworld"
     )
 
     const (
@@ -33,7 +33,7 @@
     // SayHello implements helloworld.GreeterServer
     func (s *server) SayHello(ctx context.Context, in *helloworld.HelloRequest) (*helloworld.HelloReply, error) {
     	log.Printf("Received: %v", in.GetName())
-    	return &helloworld.HelloReply{Message: "Hello " + in.GetName(),Name: *serverName}, nil
+    	return &helloworld.HelloReply{Message: "Hello " + in.GetName(),Name: serverName}, nil
     }
     
     func main() {
@@ -49,7 +49,7 @@
     		log.Fatalf("failed to serve: %v", err)
     	}
     }
-    ```
+    ```{{copy}}
 
 1. In the LEFT tab, stop the server with `Ctrl + c`{{}}.  
 
