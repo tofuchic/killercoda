@@ -11,3 +11,5 @@
     ```bash
     go run greeter_client/main.go
     ```{{exec}}
+
+1. Let's leave the server application running for a while. (Leave the LEFT tab running.)
