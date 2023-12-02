@@ -6,7 +6,7 @@
 
     ```
     option go_package = "helloworld/";
-    ```
+    ```{{copy}}
 
 1. Let's add a new attribute to the `HelloReply`{{}} as follows
 
@@ -16,4 +16,4 @@
       string message = 1;
       string name = 2;
     }
-    ```{{exec}}
+    ```{{copy}}
