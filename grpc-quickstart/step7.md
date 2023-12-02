@@ -1,6 +1,6 @@
 # Step 7: Update the server application.
 
-1. Copy the source code below and override the `greeter_server/main.go`{{}}.
+1. Copy the source code below and override the `grpc-go/examples/helloworld/greeter_server/main.go`{{}}.
 
     ```
     // Package main implements a server for Greeter service.
