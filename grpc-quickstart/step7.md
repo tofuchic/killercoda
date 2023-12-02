@@ -49,7 +49,7 @@
     		log.Fatalf("failed to serve: %v", err)
     	}
     }
-    ```
+    ```{{copy}}
 
 1. In the LEFT tab, stop the server with `Ctrl + c`{{}}.  
 
