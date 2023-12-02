@@ -1,6 +1,6 @@
 # Step 4: Modify the proto file
 
-1. Open the file `grpc-go/examples/helloworld/helloworld.proto`. You can press "Ctrl + p" for the theia shortcut and paste the path.
+1. Open the file `grpc-go/examples/helloworld/helloworld/helloworld.proto`. You can press "Ctrl + p" for the theia shortcut and paste the path.
 
 1. Modify the `option go_package`{{}} as follows.
 
