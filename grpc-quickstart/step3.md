@@ -13,3 +13,6 @@
     ```{{exec}}
 
 1. Let's leave the server application running for a while. (Leave the LEFT tab running.)
+
+    - Next, you will update the `.proto`{{}} file and update the client codes only.
+    - Imagine what will happen if you execute the client codes.
