@@ -2,7 +2,7 @@
 
 Scenario is over.
 
-Further information about updating `.proto` definition is written [here](https://protobuf.dev/overview/#updating-defs).
+Further information about updating `.proto`{{}} definition is written [here](https://protobuf.dev/overview/#updating-defs).
 
 There is a [Proto Best Practices](https://protobuf.dev/programming-guides/dos-donts/) based on some [rules](https://protobuf.dev/programming-guides/proto3/#updating).
 
