@@ -7,20 +7,35 @@
     go mod tidy
     ```{{exec}}
 
-1. Open the file `grpc-go/examples/helloworld/helloworld/helloworld.proto`. You can press "Ctrl + p" for the theia shortcut and paste the path.
-
-1. Modify the `option go_package`{{}} as follows.
+1. Copy the source code below and overwrite the `grpc-go/examples/helloworld/helloworld/helloworld.proto`. In theia, you can press "Ctrl + p" for the shortcut and paste the path.
 
     ```
+    syntax = "proto3";
+
     option go_package = "helloworld/";
-    ```{{copy}}
+    option java_multiple_files = true;
+    option java_package = "io.grpc.examples.helloworld";
+    option java_outer_classname = "HelloWorldProto";
 
-1. Let's add a new attribute to the `HelloReply`{{}} as follows
+    package helloworld;
 
-    ```{4}
+    // The greeting service definition.
+    service Greeter {
+    // Sends a greeting
+    rpc SayHello (HelloRequest) returns (HelloReply) {}
+    }
+
+    // The request message containing the user's name.
+    message HelloRequest {
+    string name = 1;
+    string date = 2;
+    }
+
     // The response message containing the greetings
     message HelloReply {
-      string message = 1;
-      string name = 2;
+    string message = 1;
+    string name = 2;
     }
     ```{{copy}}
+
+    - Client will add a timestamp in a request, and the server will return a message and the server's name.
