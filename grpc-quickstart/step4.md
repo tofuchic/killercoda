@@ -21,20 +21,20 @@
 
     // The greeting service definition.
     service Greeter {
-    // Sends a greeting
-    rpc SayHello (HelloRequest) returns (HelloReply) {}
+      // Sends a greeting
+      rpc SayHello (HelloRequest) returns (HelloReply) {}
     }
 
     // The request message containing the user's name.
     message HelloRequest {
-    string name = 1;
-    string date = 2;
+      string name = 1;
+      string date = 2;
     }
 
     // The response message containing the greetings
     message HelloReply {
-    string message = 1;
-    string name = 2;
+      string message = 1;
+      string name = 2;
     }
     ```{{copy}}
 
