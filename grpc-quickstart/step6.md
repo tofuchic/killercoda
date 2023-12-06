@@ -39,7 +39,7 @@
     	// Contact the server and print out its response.
     	ctx, cancel := context.WithTimeout(context.Background(), time.Second)
     	defer cancel()
-    	r, err := c.SayHello(ctx, &helloworld.HelloRequest{Name: *name})
+    	r, err := c.SayHello(ctx, &helloworld.HelloRequest{Name: *name, Date: time.Now().String()})
     	if err != nil {
     		log.Fatalf("could not greet: %v", err)
     	}
