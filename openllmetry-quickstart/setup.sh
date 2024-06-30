@@ -8,10 +8,10 @@ python --version | echo > /tmp/background0
 
 python -m ensurepip --upgrade
 python -m pip install --upgrade pip
-pyhton -m pip --version | echo > /tmp/background0
+python -m pip --version | echo > /tmp/background0
 
 python -m pip install poetry
-pyhton -m poetry --version | echo > /tmp/background0
+python -m poetry --version | echo > /tmp/background0
 
 python -m poetry install
 echo done > /tmp/background0
