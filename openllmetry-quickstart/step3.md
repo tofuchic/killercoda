@@ -59,7 +59,7 @@
     export OPENAI_BASE_URL="https://api.openai-mock.com"
     ```{{exec}}
 
-1. Setup the OTel server.
+1. (Optional because you have done in Step 2.)Setup the OTel server.
 
 <!-- TBD -->
 
