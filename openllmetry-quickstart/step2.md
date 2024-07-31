@@ -11,12 +11,17 @@
     ```
     import os
     from openai import OpenAI
+    from traceloop.sdk import Traceloop
+    from traceloop.sdk.decorators import workflow
+
+    Traceloop.init(disable_batch=True)
 
     client = OpenAI(
         api_key=os.environ["OPENAI_API_KEY"],
         base_url=os.environ["OPENAI_BASE_URL"],
     )
 
+    @workflow(name="create_joke")
     def create_joke():
         completion = client.chat.completions.create(
             model="gpt-3.5-turbo",
@@ -25,6 +30,7 @@
 
         return completion.choices[0].message.content
 
+    @workflow(name="translate_joke_to_pirate")
     def translate_joke_to_pirate(joke: str):
         completion = client.chat.completions.create(
             model="gpt-3.5-turbo",
@@ -35,6 +41,7 @@
 
         return completion.choices[0].message.content
 
+    @workflow(name="history_jokes_tool")
     def history_jokes_tool():
         completion = client.chat.completions.create(
             model="gpt-3.5-turbo",
@@ -43,6 +50,7 @@
 
         return completion.choices[0].message.content
 
+    @workflow(name="joke_workflow")
     def joke_workflow():
         eng_joke = create_joke()
         pirate_joke = translate_joke_to_pirate(eng_joke)
@@ -59,9 +67,35 @@
     export OPENAI_BASE_URL="https://api.openai-mock.com"
     ```{{exec}}
 
-1. Setup the OTel server.
+1. Setup the OTel server. This time is [Jaeger](https://www.jaegertracing.io/). **Execute the command below in a new terminal.**
 
-<!-- TBD -->
+    ```bash
+    docker run --rm --name jaeger \
+    -e COLLECTOR_ZIPKIN_HOST_PORT=:9411 \
+    -p 6831:6831/udp \
+    -p 6832:6832/udp \
+    -p 5778:5778 \
+    -p 16686:16686 \
+    -p 4317:4317 \
+    -p 4318:4318 \
+    -p 14250:14250 \
+    -p 14268:14268 \
+    -p 14269:14269 \
+    -p 9411:9411 \
+    jaegertracing/all-in-one:1.59
+    ```{{exec}}
+
+1. Install the required module for OpenLLMetry.
+
+    ```bash
+    python -m pip install traceloop-sdk
+    ```{{exec}}
+
+1. Set the environment variable to export the trace to the OLTP exporter.
+
+    ```bash
+    export TRACELOOP_BASE_URL="http://localhost:4318"
+    ```{{exec}}
 
 1. Execute the script.
 
