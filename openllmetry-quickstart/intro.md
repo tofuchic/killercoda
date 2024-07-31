@@ -4,8 +4,8 @@ This scenario is based on the [OpenLLMetry Getting Started](https://github.com/t
 
 Let's get started.
 
-In this scenario, you will run the example applications of OpenLLMetry.
-The example applications code exists in [the repository](https://github.com/traceloop/openllmetry/tree/main/packages/sample-app), so you first have to clone it.
+In this scenario, you will create and run the python scripts of OpenLLMetry.
+The official example applications code exists in [the repository](https://github.com/traceloop/openllmetry/tree/main/packages/sample-app), and it will be cloned automatically.
 
 For python execution, `[rye](https://rye.astral.sh/)` is under installing.
 Please wait until the terminal echo `Hello`.
