@@ -77,6 +77,27 @@
     jaegertracing/all-in-one:1.59
     ```{{exec}}
 
+1. Install the required OpenTelemetry auto-instrumentation tool.
+
+    ```bash
+    pyhton -m pip install opentelemetry-distro opentelemetry-exporter-otlp
+    .venv/bin/opentelemetry-bootstrap -a install
+    ```{{exec}}
+
+1. Execute python script with auto-instrument command.
+
+    ```bash
+    .venv/bin/opentelemetry-instrument \
+    --traces_exporter console,otlp \
+    --service_name openai-mock-app \
+    --exporter_otlp_logs_protocol grpc \
+    --exporter_otlp_endpoint localhost:4317 \
+    --exporter_otlp_traces_insecure true \
+    python sample_app/openai_mock_streaming.py
+    ```{{exec}}
+
+---
+
 1. Install the required module for OpenLLMetry.
 
     ```bash
