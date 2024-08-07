@@ -1,4 +1,4 @@
-# Step 1: Instrument OpenTelemetry
+# Step 2: Instrument OpenTelemetry
 
 1. (Optional because you have done in Step 1.) Set the environment variables.
 

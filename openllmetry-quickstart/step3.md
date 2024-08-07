@@ -1,4 +1,4 @@
-# Step 1: Instrument OpenLLMetry
+# Step 3: Instrument OpenLLMetry
 
 1. Create the script which will call [openai-mock](https://api.openai-mock.com/#introduction) and send the **Generative AI specific** trace to the APM.
 
