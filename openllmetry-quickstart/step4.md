@@ -1,6 +1,6 @@
 # Step 4: Use Instana
 
-1. Check your Instana `agent key` and `download key` in your Instana tennant.
+1. Check your Instana `agent key` and `download key` in your Instana tenant.
 
     ```
     INSTANA_AGENT_KEY=
