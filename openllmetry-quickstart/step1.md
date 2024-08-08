@@ -8,7 +8,7 @@
 
 1. Copy and paste the code below to the file you have created.
 
-    ```
+    ```py
     import os
     from flask import Flask, jsonify
     from openai import OpenAI
