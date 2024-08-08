@@ -20,7 +20,7 @@
 1. Install the required OpenTelemetry auto-instrumentation tool.
 
     ```bash
-    pyhton -m pip install opentelemetry-distro opentelemetry-exporter-otlp
+    python -m pip install opentelemetry-distro opentelemetry-exporter-otlp
     .venv/bin/opentelemetry-bootstrap -a install
     ```{{exec}}
 
