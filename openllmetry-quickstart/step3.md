@@ -63,8 +63,14 @@
 
 <!-- TBD -->
 
-1. Execute the script.
+1. Execute python script with auto-instrument command.
 
     ```bash
-    python sample_app/openai_mock_streaming_llmetry.py
+    .venv/bin/opentelemetry-instrument \
+    --traces_exporter console,otlp \
+    --service_name openai-mock-app \
+    --exporter_otlp_logs_protocol grpc \
+    --exporter_otlp_endpoint localhost:4317 \
+    --exporter_otlp_traces_insecure true \
+    python sample_app/openai_mock_streaming.py
     ```{{exec}}

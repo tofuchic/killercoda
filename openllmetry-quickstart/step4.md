@@ -40,3 +40,19 @@
     ```bash
     TRACELOOP_HEADERS="Authorization=Api-Token%20$INSTANA_AGENT_KEY"
     ```{{exec}}
+
+1. Execute python script with auto-instrument command.
+
+    ```bash
+    .venv/bin/opentelemetry-instrument \
+    --traces_exporter console,otlp \
+    --logs_exporter console,otlp \
+    --metrics_exporter console,otlp \
+    --service_name openai-mock-app \
+    --exporter_otlp_logs_protocol grpc \
+    --exporter_otlp_endpoint localhost:4317 \
+    --exporter_otlp_traces_insecure true \
+    --exporter_otlp_logs_insecure true \
+    --exporter_otlp_metrics_insecure true \
+    python sample_app/openai_mock_streaming.py
+    ```{{exec}}
