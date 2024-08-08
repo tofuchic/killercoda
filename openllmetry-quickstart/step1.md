@@ -10,6 +10,7 @@
 
     ```
     import os
+    from flask import Flask, jsonify
     from openai import OpenAI
 
     client = OpenAI(
@@ -43,10 +44,11 @@
 
         return completion.choices[0].message.content
 
+    @app.route('/', methods=['GET'])
     def joke_workflow():
         eng_joke = create_joke()
         pirate_joke = translate_joke_to_pirate(eng_joke)
-        print(pirate_joke)
+        return jsonify(pirate_joke)
         
     if __name__ == "__main__":
         joke_workflow()
