@@ -1,13 +1,18 @@
-# Step 4: Use Instana
+# Step 4: Use Instana instead of Jaeger
+
+1. Stop the Jaeger.
+
+    ```bash
+    echo stop jaeger
+    ```{{exec interrupt}}
 
 1. Check your Instana `agent key` and `download key` in your Instana tenant.
 
-    ```
+    ```bash
     INSTANA_AGENT_KEY=
     ```{{copy}}
 
-    ```
-
+    ```bash
     INSTANA_DOWNLOAD_KEY=
     ```{{copy}}
 
@@ -19,7 +24,7 @@
 
 1. Enable gRPC and restart the Instana agent.
 
-    ```
+    ```bash
     cat <<EOF >> /opt/instana/agent/etc/instana/configuration.yaml
     com.instana.plugin.opentelemetry:
         grpc: enabled: true
