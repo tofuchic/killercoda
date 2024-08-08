@@ -7,8 +7,8 @@ Let's get started.
 In this scenario, you will create and run the python scripts of OpenLLMetry.
 The official example applications code exists in [the repository](https://github.com/traceloop/openllmetry/tree/main/packages/sample-app), and it will be cloned automatically.
 
-For python execution, `[rye](https://rye.astral.sh/)`{{}} is under installing.
-Please wait until the terminal echo `Hello...`{{}}.
+For python execution, [rye](https://rye.astral.sh/) is under installing.
+Wait until the terminal echoes `Hello...'`{{}}, you may have to wait 3-4 minutes.
 
 ```bash
 source ~/.bashrc

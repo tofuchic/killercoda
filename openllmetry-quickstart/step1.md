@@ -8,9 +8,12 @@
 
 1. Copy and paste the code below to the file you have created.
 
-    ```
+    ```py
     import os
+    from flask import Flask, jsonify
     from openai import OpenAI
+
+    app = Flask(__name__)
 
     client = OpenAI(
         api_key=os.environ["OPENAI_API_KEY"],
@@ -43,14 +46,21 @@
 
         return completion.choices[0].message.content
 
+    @app.route('/')
     def joke_workflow():
         eng_joke = create_joke()
         pirate_joke = translate_joke_to_pirate(eng_joke)
-        print(pirate_joke)
+        return jsonify(pirate_joke)
         
     if __name__ == "__main__":
-        joke_workflow()
+        app.run(debug=True, port=8080, host='0.0.0.0')
     ```{{copy}}
+
+1. Install the required packages.
+
+    ```bash
+    python -m pip install openai flask
+    ```{{exec}}
 
 1. Set the environment variables.
 
