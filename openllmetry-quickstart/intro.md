@@ -16,7 +16,7 @@ This scenario is not READY. There may be a lot of errors when you follow the ins
 ## Preparation
 
 For python execution, [rye](https://rye.astral.sh/) is under installing.
-Wait until the terminal echoes `Hello...'`{{}}, you may have to wait 3-4 minutes.
+Wait until the terminal echoes `Hello...`{{}}, you may have to wait 3-4 minutes.
 
 ```bash
 source ~/.bashrc
