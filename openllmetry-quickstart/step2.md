@@ -7,7 +7,7 @@
     export OPENAI_BASE_URL="https://api.openai-mock.com"
     ```{{exec}}
 
-1. Setup the OTel server. This time is [Jaeger](https://www.jaegertracing.io/). **Execute the command below in a new terminal.**
+1. Setup the OTel server. This time is [Jaeger](https://www.jaegertracing.io/). **Execute the command below in the right terminal**.
 
     ```bash
     docker run --rm --name jaeger \
@@ -22,6 +22,12 @@
     ```bash
     python -m pip install opentelemetry-distro opentelemetry-exporter-otlp
     .venv/bin/opentelemetry-bootstrap -a install
+    ```{{exec}}
+
+1. Set the environment variable for python logging auto-instrumentation.
+
+    ```bash
+    export OTEL_PYTHON_LOGGING_AUTO_INSTRUMENTATION_ENABLED=true
     ```{{exec}}
 
 1. Execute python script with auto-instrument command.
