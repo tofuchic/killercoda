@@ -24,6 +24,12 @@
     .venv/bin/opentelemetry-bootstrap -a install
     ```{{exec}}
 
+1. Set the environment variable for python logging auto-instrumentation.
+
+    ```bash
+    export OTEL_PYTHON_LOGGING_AUTO_INSTRUMENTATION_ENABLED=true
+    ```{{exec}}
+
 1. Execute python script with auto-instrument command.
 
     ```bash
