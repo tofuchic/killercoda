@@ -3,7 +3,7 @@
 1. Create the script which will call [openai-mock](https://api.openai-mock.com/#introduction) and **send the Generative AI specific trace** to the APM.
 
     ```bash
-    touch sample_app/openai_mock_streaming_llmetry.py
+    touch sample_app/openai_mock_streaming_openllmetry.py
     ```{{exec}}
 
 1. Copy and paste the code below to the file you have created.
@@ -62,7 +62,7 @@
         return jsonify(pirate_joke)
         
     if __name__ == "__main__":
-        app.run(debug=True, port=8080, host='0.0.0.0')
+        app.run()
     ```{{copy}}
 
 1. (Optional because you have done in Step 1.) Set the environment variables.
@@ -103,5 +103,5 @@
     --exporter_otlp_logs_protocol grpc \
     --exporter_otlp_endpoint localhost:4317 \
     --exporter_otlp_traces_insecure true \
-    python sample_app/openai_mock_streaming.py
+    python -m flask --app sample_app/openai_mock_streaming_openllmetry.py run -h 0.0.0.0 -p 8080
     ```{{exec}}
