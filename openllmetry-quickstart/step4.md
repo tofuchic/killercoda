@@ -1,6 +1,6 @@
 # Step 4: Use Instana instead of Jaeger
 
-1. Stop the Jaeger.
+1. Stop the Jaeger. **Execute the command below in the right terminal**.
 
     ```bash
     echo stop jaeger
