@@ -11,7 +11,7 @@ The official example applications code exists in [the repository](https://github
 
 ## 🚧Caution🚧
 
-This scenario is not READY. There may be a lot of errors when you follow the instructions.
+There may be a lot of errors when you follow the instructions, please give me feedback if you have found any workarounds.
 
 ## Preparation
 

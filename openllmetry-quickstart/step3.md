@@ -105,3 +105,11 @@
     --exporter_otlp_traces_insecure true \
     python -m flask --app sample_app/openai_mock_streaming_openllmetry.py run -h 0.0.0.0 -p 8080
     ```{{exec}}
+
+1. [Access to the flask app]({{TRAFFIC_HOST1_8080}}).
+
+    - Verify you can get the mock response.
+
+1. [Access to the Jaeger UI]({{TRAFFIC_HOST1_16686}}).
+
+    - Verify you can see the distributed tracing, and they includes the LLM specific infomation.
