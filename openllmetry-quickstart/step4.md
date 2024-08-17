@@ -66,6 +66,6 @@
 
     - Verify you can get the mock response.
 
-1. Access to the INSTANA.
+1. Access to the Instana.
 
     - Verify you can see the distributed tracing, and they includes the LLM specific infomation.
