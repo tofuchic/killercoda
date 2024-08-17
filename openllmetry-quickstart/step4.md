@@ -59,5 +59,5 @@
     --exporter_otlp_traces_insecure true \
     --exporter_otlp_logs_insecure true \
     --exporter_otlp_metrics_insecure true \
-    python sample_app/openai_mock_streaming.py
+    python -m flask --app sample_app/openai_mock_streaming_openllmetry.py run -h 0.0.0.0 -p 8080
     ```{{exec}}

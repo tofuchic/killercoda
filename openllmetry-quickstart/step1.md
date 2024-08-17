@@ -54,7 +54,7 @@
         return jsonify(pirate_joke)
         
     if __name__ == "__main__":
-        app.run(debug=True, port=8080, host='0.0.0.0')
+        app.run()
     ```{{copy}}
 
 1. Install the required packages.
@@ -73,5 +73,5 @@
 1. Execute the script.
 
     ```bash
-    python sample_app/openai_mock_streaming.py
+    python -m flask --app sample_app/openai_mock_streaming.py run -h 0.0.0.0 -p 8080
     ```{{exec}}
