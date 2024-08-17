@@ -39,5 +39,5 @@
     --exporter_otlp_traces_protocol grpc \
     --service_name openai-mock-app \
     --exporter_otlp_endpoint localhost:4317 \
-    python sample_app/openai_mock_streaming.py
+    python -m flask --app sample_app/openai_mock_streaming.py run -h 0.0.0.0 -p 8080
     ```{{exec}}
