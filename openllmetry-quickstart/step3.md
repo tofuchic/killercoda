@@ -10,6 +10,7 @@
 
     ```py
     import os
+    from flask import Flask, jsonify
     from openai import OpenAI
     from traceloop.sdk import Traceloop
     from traceloop.sdk.decorators import workflow
