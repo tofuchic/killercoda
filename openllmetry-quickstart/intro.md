@@ -9,7 +9,7 @@ Let's get started.
 In this scenario, you will create and run the python scripts of OpenLLMetry.
 The official example applications code exists in [the repository](https://github.com/traceloop/openllmetry/tree/main/packages/sample-app), and it will be cloned automatically.
 
-## Caution
+## 🚧Caution🚧
 
 This scenario is not READY. There may be a lot of errors when you follow the instructions.
 
