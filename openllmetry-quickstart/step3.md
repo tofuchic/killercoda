@@ -72,7 +72,7 @@
     export OPENAI_BASE_URL="https://api.openai-mock.com"
     ```{{exec}}
 
-1. (Optional because you have executed in Step 2.)Setup the OTel server: [Jaeger](https://www.jaegertracing.io/). **Execute the command below in the right☞ terminal.**
+1. (Optional because you have executed in Step 2.)Setup the OTel server: [Jaeger](https://www.jaegertracing.io/). **Execute the command below in the right-side☞ terminal.**
 
     ```bash
     docker run --rm --name jaeger \
