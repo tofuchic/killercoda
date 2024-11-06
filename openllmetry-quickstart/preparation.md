@@ -12,3 +12,5 @@ Execute the command below in both terminals.
 source ~/.bashrc
 cd openllmetry/packages/sample-app
 ```{{exec}}
+
+Please note that from the next page onward, when instructing commands to be executed in the right terminal, a note stating ‘**Execute the command below in the right☞ terminal**’ will be included.
