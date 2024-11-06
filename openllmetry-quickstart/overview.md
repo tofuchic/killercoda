@@ -7,3 +7,5 @@ This scenario consists of 4 steps, allowing you to experience a flow that enhanc
 3. Introduce OpenLLMetry in the created sample application and send telemetry to Jaeger running locally.
 4. Send the telemetry from the created sample application to Instana (SaaS).
    - This step cannot be progressed without having an Instana account.
+
+<!-- TODO: 構成図を追加 -->
