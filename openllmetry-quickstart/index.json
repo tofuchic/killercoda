@@ -9,6 +9,9 @@
     },
     "steps": [
       {
+        "text": "config.md"
+      },
+      {
         "text": "step1.md"
       },
       {
