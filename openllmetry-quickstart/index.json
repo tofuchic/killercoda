@@ -9,6 +9,9 @@
     },
     "steps": [
       {
+        "text": "preparation.md"
+      },
+      {
         "text": "step1.md"
       },
       {
