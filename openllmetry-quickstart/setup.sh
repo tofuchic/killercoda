@@ -4,6 +4,10 @@ cd openllmetry/packages/sample-app
 curl -sSf https://rye.astral.sh/get | RYE_INSTALL_OPTION="--yes" bash
 echo 'source "$HOME/.rye/env"' >> ~/.bashrc
 source "$HOME/.rye/env"
+
+# `.python-version` in the sample repository is not following `pyproject.toml`
+echo "3.11.10" > .python-version
+
 rye sync
 python --version
 
