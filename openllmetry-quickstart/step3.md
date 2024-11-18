@@ -4,7 +4,7 @@
 
     ```bash
     touch sample_app/openai_mock_streaming_openllmetry.py
-    ```{{exec}}
+    ```{{exec interrupt}}
 
 1. Copy and paste the code below to the file you have created.
 
