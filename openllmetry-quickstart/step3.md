@@ -92,6 +92,7 @@
 
     ```bash
     export TRACELOOP_BASE_URL="http://localhost:4317"
+    export TRACELOOP_TELEMETRY=false
     ```{{exec}}
 
 1. Execute python script with auto-instrument command.
