@@ -89,7 +89,7 @@
     python -m pip install traceloop-sdk
     ```{{exec}}
 
-1. Set the environment variable to export the trace to the OLTP exporter.
+1. Set the environment variable to export the trace to the OTLP exporter.
 
     ```bash
     export TRACELOOP_BASE_URL="http://localhost:4317"
