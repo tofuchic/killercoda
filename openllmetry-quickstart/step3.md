@@ -95,6 +95,8 @@
     export TRACELOOP_TELEMETRY=false
     ```{{exec}}
 
+    - To learn more about `TRACELOOP_TELEMETRY`, please visit [here](https://www.traceloop.com/docs/openllmetry/privacy/telemetry#opting-out).
+
 1. Execute python script with auto-instrument command.
 
     ```bash
