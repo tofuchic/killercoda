@@ -66,6 +66,8 @@
         app.run()
     ```{{copy}}
 
+    - Only the line with the comment is the newly added code.
+
 1. (Optional because you have done in Step 1.) Set the environment variables.
 
     ```bash
