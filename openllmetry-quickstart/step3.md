@@ -12,10 +12,11 @@
     import os
     from flask import Flask, jsonify
     from openai import OpenAI
-    from traceloop.sdk import Traceloop
-    from traceloop.sdk.decorators import workflow
 
-    Traceloop.init(disable_batch=True)
+    from traceloop.sdk import Traceloop # Required to use OpenLLMetry
+    from traceloop.sdk.decorators import workflow # Optional code to issue traces corresponding to function calls
+
+    Traceloop.init(disable_batch=True) # Required to use OpenLLMetry
 
     app = Flask(__name__)
 
@@ -24,7 +25,7 @@
         base_url=os.environ["OPENAI_BASE_URL"],
     )
 
-    @workflow(name="create_joke")
+    @workflow(name="create_joke") # Optional code to issue traces corresponding to function calls
     def create_joke():
         completion = client.chat.completions.create(
             model="gpt-3.5-turbo",
@@ -33,7 +34,7 @@
 
         return completion.choices[0].message.content
 
-    @workflow(name="translate_joke_to_pirate")
+    @workflow(name="translate_joke_to_pirate") # Optional code to issue traces corresponding to function calls
     def translate_joke_to_pirate(joke: str):
         completion = client.chat.completions.create(
             model="gpt-3.5-turbo",
@@ -44,7 +45,7 @@
 
         return completion.choices[0].message.content
 
-    @workflow(name="history_jokes_tool")
+    @workflow(name="history_jokes_tool") # Optional code to issue traces corresponding to function calls
     def history_jokes_tool():
         completion = client.chat.completions.create(
             model="gpt-3.5-turbo",
@@ -54,7 +55,7 @@
         return completion.choices[0].message.content
 
     @app.route('/')
-    @workflow(name="joke_workflow")
+    @workflow(name="joke_workflow") # Optional code to issue traces corresponding to function calls
     def joke_workflow():
         eng_joke = create_joke()
         pirate_joke = translate_joke_to_pirate(eng_joke)
